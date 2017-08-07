@@ -19,7 +19,6 @@ class HomeController < ApplicationController
         file.close
 
         system('ruby tmp/ruby.rb > tmp/result.txt')
-        byebug
         @result = File.read('tmp/result.txt')
         @code = params["code"]
 
